@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixie Voting</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9N7kk_vseXH4iEVPTIEyIDDsUfFdJRLu8bQC20o1Dw8iHItJH2pQrket_LQhjjaUbnwE&usqp=CAU"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Monoton&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <a href="login.html">
+        <div id="Login">
+            <div class="settings">
+                <i class="fas fa-sign-in-alt"> </i>
+            </div>
+        </div>
+    </a>
+    <form name="google-sheet">
+        <div class="container">
+            <div class="logo"> <img src="logo.png" height="150"> </div>
+            <div class="glass">
+                <h2>
+                    <div class="glass1">Mepco Schlenk Engineering College (Autonomous), Sivakasi</div>
+                    <div class="glass2">Photography Club </div>
+                </h2>
+            </div>
+            <div class="pc"> <img src="pc.png" alt="Club Logo" height="100"> </div>
+            <div class="box">
+                <h3>&nbsp&nbsp Pixie Voting &nbsp&nbsp</h3>
+                <div class="userid">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Admission No" id="userid" name="userid" required>
+                </div>
+                <div class="photono">
+                    <i class="fas fa-camera"></i>
+                    <input type="number" min="1" max="15" placeholder="(1-15)" id="photono" name="photono" required>
+                </div>
+                <div class="button">
+                    <button id="submit" onclick="message()">Submit</button>
+                </div>
+                <div class="message">
+                    <div class="success" id="success"><b>Successfully Submitted</b></div>
+                    <div class="danger" id="danger"><b>Fields Can't be Empty!</b></div>
+                    <div class="alertra" id="alertra"><b>Range must between 1-15 </b></div>
+                    <div class="erroroc" id="erroroc"><b>Duplicate Entry or Network error</b></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="footerbottom">
+                <footer><b>&nbspDesigned and Developed by Saravana Prasath J</b></footer>
+            </div>
+            -->
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

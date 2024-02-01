@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixie Result</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9N7kk_vseXH4iEVPTIEyIDDsUfFdJRLu8bQC20o1Dw8iHItJH2pQrket_LQhjjaUbnwE&usqp=CAU"
+        type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Monoton&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+    <p id='m'></p>
+    <p id="main"></p>
+    <h1 class="he">Pixie Result</h1>
+    <div id="result" class="table">
+
+    </div>
+    <script>
+
+        fetch('https://script.google.com/macros/s/AKfycbwcEtV7yElByPBcSp1uJJqEodYkhRzq6oIpeWPhxjb1GuK8EUTc1AKdo8EsUFwfpAPF/exec')
+            .then(res => res.json())
+            .then(data => {
+                var varr = Object.values(data.content);
+                console.log(varr);
+                var count = {};
+                for (var i = 0; i < varr.length; i++) {
+                    if (varr[i] != null && varr[i] != "") {
+                        var num = varr[i];
+                        count[num] = count[num] ? count[num] + 1 : 1;
+                    }
+                }
+                console.log(count)
+                ke = Object.keys(count);
+                val = Object.values(count);
+                //document.getElementById('m').innerHTML = `count: (${Object.keys(count)})`;
+                //document.getElementById('main').innerHTML = `count: (${Object.values(count)})`;
+                function funcall() {
+                    setTimeout(() => {
+                        var html = "<table border>"
+                        html += "<tr>";
+                        html += "<td>" + "&nbspPhoto No&nbsp" + "</td>";
+                        html += "<td>" + "&nbsp&nbspVote&nbsp&nbsp" + "</td>";
+                        html += "</tr>";
+                        for (var j = 0; j < val.length; j++) {
+                            html += "<tr>";
+                            html += "<td>" + ke[j] + "</td>";
+                            html += "<td>" + val[j] + "</td>";
+                            html += "</tr>";
+                        }
+                        document.getElementById("result").innerHTML = html;
+                    }, 500);
+                }
+                funcall()
+            });
+    </script>
+</body>
+
+</html>

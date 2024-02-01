@@ -1,0 +1,52 @@
+body {
+    background: url("https://images.pexels.com/photos/2927762/pexels-photo-2927762.jpeg?cs=srgb&dl=pexels-adil-2927762.jpg&fm=jpg") no-repeat center center fixed #000;
+    background: url("bg.jpg") no-repeat center center fixed #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.he{
+    width: 280px;;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    position:absolute;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
+    font-family: "Berkshire Swash", "consolas", sans-serif;
+    align-items: center;
+    font-size: 280%;
+    font-weight: 1000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: bold;
+    position:absolute;
+    margin: 15px;
+    top: 10%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.table{
+    width:15%;
+    height: auto;
+    background: #fff;
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position:absolute;
+    border: 1px solid #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
