@@ -10,12 +10,12 @@ email.addEventListener('textInput', email_Verify);
 password.addEventListener('textInput', pass_Verify);
 
 function validated(){
-	if (email.value.length < 6) {
+	if (email.value != "pixie") {
 		email.style.border = "1px solid red";
 		email_error.style.display = "block";
 		return false;
 	}
-	if (password.value.length < 4) {
+	if (password.value != "123") {
 		password.style.border = "1px solid red";
 		pass_error.style.display = "block";
 		return false;
@@ -23,14 +23,14 @@ function validated(){
 
 }
 function email_Verify(){
-	if (email.value.length >= 5) {
+	if (email.value === "pixie") {
 		email.style.border = "1px solid silver";
 		email_error.style.display = "none";
 		return true;
 	}
 }
 function pass_Verify(){
-	if (password.value.length >= 3) {
+	if (password.value === "123") {
 		password.style.border = "1px solid silver";
 		pass_error.style.display = "none";
 		return true;
